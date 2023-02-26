@@ -101,6 +101,7 @@ public class BattleManager : MonoBehaviour
   {
     Debug.Log("Summon: " + character.name + " " + front + " " + enemy);
     GameObject card = Instantiate(_charactercardPrefab, enemy ? _enemyCardParent : _playerCardParent);
+    card.GetComponent<CharacterCardDrag>().enabled = false;//Turn off dragging
     card.GetComponent<CharacterCard>().SetCharacter(character, enemy);
     if (front)
     {

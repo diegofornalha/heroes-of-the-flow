@@ -44,7 +44,8 @@ public class CardController : MonoBehaviour
     if (!currentCard) return;
     if (!currentSlot) return;
     if (currentSlot.characterCard != null) return;
-    if (_mana < 3) return;//Not enough mana to purchase
+    CharacterCard characterCard = currentCard.GetComponent<CharacterCard>();
+    if (_mana < 3 && !characterCard.IsCharacter) return;//Not enough mana to purchase, check not isCharacter since want to still be able to move characters around
     //Remove card from all other slots
     for (int i = 0; i < _slots.Length; i++)
     {
@@ -55,7 +56,6 @@ public class CardController : MonoBehaviour
     }
 
     currentCard.transform.position = currentSlot.transform.position;
-    CharacterCard characterCard = currentCard.GetComponent<CharacterCard>();
     if (!characterCard.IsCharacter)
     { //Only wants to do this when moved from hand to board i.e. initially purchased
       characterCard.IsCharacter = true;

@@ -77,8 +77,6 @@ public class ShopManager : MonoBehaviour
   {
     BattleData._playerCharacters.Clear();
     BattleData._enemyCharacters.Clear();
-
-
     for (int i = 0; i < _cardController.Slots.Length; i++)
     {
       if (_cardController.Slots[i].characterCard == null) continue;
