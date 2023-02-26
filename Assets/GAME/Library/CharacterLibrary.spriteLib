@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: cards
+    m_Hash: 79845629
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Boar
+      m_Hash: -1858107071
+      m_Sprite: {fileID: 21300000, guid: f8f5b05f98dbd4d50b0081c57036fd69, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f8f5b05f98dbd4d50b0081c57036fd69, type: 3}
+    - m_Name: Toad
+      m_Hash: 278475859
+      m_Sprite: {fileID: 21300000, guid: 89399a6481e204d5c8f9f2a72f40748e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 89399a6481e204d5c8f9f2a72f40748e, type: 3}
+    - m_Name: Imp
+      m_Hash: 6032267
+      m_Sprite: {fileID: 21300000, guid: a9ef1d0e67c78467b89593542e128f5c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a9ef1d0e67c78467b89593542e128f5c, type: 3}
+    - m_Name: Magma Demon
+      m_Hash: -1206645802
+      m_Sprite: {fileID: 21300000, guid: 9b2145c1493574293a9a33927b9dfce7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9b2145c1493574293a9a33927b9dfce7, type: 3}
+    - m_Name: Bug
+      m_Hash: 230816244
+      m_Sprite: {fileID: 21300000, guid: 8a4b1f6dfb39f49b494c003e5d8802f0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8a4b1f6dfb39f49b494c003e5d8802f0, type: 3}
+    - m_Name: Spider
+      m_Hash: 1836806066
+      m_Sprite: {fileID: 21300000, guid: f716236825e244529877056cc1f2e20a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f716236825e244529877056cc1f2e20a, type: 3}
+    - m_Name: Beakling
+      m_Hash: -469702178
+      m_Sprite: {fileID: 21300000, guid: 4f795cce55af34622b6974e107c2df39, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4f795cce55af34622b6974e107c2df39, type: 3}
+    - m_Name: Slug
+      m_Hash: 951006300
+      m_Sprite: {fileID: 21300000, guid: 4fc5f2fd507044844a55083f0e58bd9a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4fc5f2fd507044844a55083f0e58bd9a, type: 3}
+    - m_Name: Scorpion
+      m_Hash: 439556112
+      m_Sprite: {fileID: 21300000, guid: 90b173d0177dc49e88428a98cfa68291, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 90b173d0177dc49e88428a98cfa68291, type: 3}
+    - m_Name: Snake
+      m_Hash: -1867758438
+      m_Sprite: {fileID: 21300000, guid: 35a757496e3dc421091a58a0a8ff313d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 35a757496e3dc421091a58a0a8ff313d, type: 3}
+    - m_Name: Raptor
+      m_Hash: 813650378
+      m_Sprite: {fileID: 21300000, guid: 649a20920702949ceb060997c256abbc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 649a20920702949ceb060997c256abbc, type: 3}
+    - m_Name: Lurker
+      m_Hash: -614480081
+      m_Sprite: {fileID: 21300000, guid: b60cbcecda4614de59bee63e0f18bb34, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b60cbcecda4614de59bee63e0f18bb34, type: 3}
+    - m_Name: Devourer
+      m_Hash: 2054626590
+      m_Sprite: {fileID: 21300000, guid: 2a2f5bf9baa34428bb8b6f8b95c9ae46, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 2a2f5bf9baa34428bb8b6f8b95c9ae46, type: 3}
+    - m_Name: Marsh Howler
+      m_Hash: 1521441952
+      m_Sprite: {fileID: 21300000, guid: f9e5c304ce0e0452caaf1ee41facf49d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f9e5c304ce0e0452caaf1ee41facf49d, type: 3}
+    - m_Name: Ghnome
+      m_Hash: 2133076971
+      m_Sprite: {fileID: 21300000, guid: 8e664214248aa420396fe7e6eabf579c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8e664214248aa420396fe7e6eabf579c, type: 3}
+    - m_Name: Guard Goblin
+      m_Hash: 215957076
+      m_Sprite: {fileID: 21300000, guid: 69b645d0adbf641d1b8798c6d189aa49, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 69b645d0adbf641d1b8798c6d189aa49, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 16
+  - m_Name: characters
+    m_Hash: 975782158
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Boar
+      m_Hash: -1858107071
+      m_Sprite: {fileID: 21300000, guid: 245b80d2026584fc4a5aa3238f6c6e19, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 245b80d2026584fc4a5aa3238f6c6e19, type: 3}
+    - m_Name: Toad
+      m_Hash: 278475859
+      m_Sprite: {fileID: 21300000, guid: 0b5b718f242a946098182c0be2b4fe96, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0b5b718f242a946098182c0be2b4fe96, type: 3}
+    - m_Name: Imp
+      m_Hash: 6032267
+      m_Sprite: {fileID: 21300000, guid: d55a8d72fc6ac4f8f912ff1db2c0c4af, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d55a8d72fc6ac4f8f912ff1db2c0c4af, type: 3}
+    - m_Name: Magma Demon
+      m_Hash: -1206645802
+      m_Sprite: {fileID: 21300000, guid: 4a9c8fd5080af4158b54ef62febd90d8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4a9c8fd5080af4158b54ef62febd90d8, type: 3}
+    - m_Name: Bug
+      m_Hash: 230816244
+      m_Sprite: {fileID: 21300000, guid: bed68166a1a59432c86d950225c40ac0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: bed68166a1a59432c86d950225c40ac0, type: 3}
+    - m_Name: Spider
+      m_Hash: 1836806066
+      m_Sprite: {fileID: 21300000, guid: d8602bfe8761c4606887a6b1b98c425e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d8602bfe8761c4606887a6b1b98c425e, type: 3}
+    - m_Name: Beakling
+      m_Hash: -469702178
+      m_Sprite: {fileID: 21300000, guid: 9aaff3242eb2c46c88db83336a4ad776, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 9aaff3242eb2c46c88db83336a4ad776, type: 3}
+    - m_Name: Slug
+      m_Hash: 951006300
+      m_Sprite: {fileID: 21300000, guid: b82c819281eef4ed79ee013543bf8121, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: b82c819281eef4ed79ee013543bf8121, type: 3}
+    - m_Name: Scorpion
+      m_Hash: 439556112
+      m_Sprite: {fileID: 21300000, guid: ae5e4a7c55b40452bb6b4d00ec2e35f7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ae5e4a7c55b40452bb6b4d00ec2e35f7, type: 3}
+    - m_Name: Snake
+      m_Hash: -1867758438
+      m_Sprite: {fileID: 21300000, guid: fe859e8c9697346eeb0321e0d37acaca, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: fe859e8c9697346eeb0321e0d37acaca, type: 3}
+    - m_Name: Raptor
+      m_Hash: 813650378
+      m_Sprite: {fileID: 21300000, guid: 0a6f4a2a1ea5d4e94b264c9a90e9ca08, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 0a6f4a2a1ea5d4e94b264c9a90e9ca08, type: 3}
+    - m_Name: Lurker
+      m_Hash: -614480081
+      m_Sprite: {fileID: 21300000, guid: 8a74ed134e9bf460f9fc92a552361bf9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8a74ed134e9bf460f9fc92a552361bf9, type: 3}
+    - m_Name: Devourer
+      m_Hash: 2054626590
+      m_Sprite: {fileID: 21300000, guid: f4069e5a0e2b24cffa863a72321d1c21, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f4069e5a0e2b24cffa863a72321d1c21, type: 3}
+    - m_Name: Marsh Howler
+      m_Hash: 1521441952
+      m_Sprite: {fileID: 21300000, guid: 7cc6ea604afe54d7bac1814edcf4e9c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7cc6ea604afe54d7bac1814edcf4e9c5, type: 3}
+    - m_Name: Ghnome
+      m_Hash: 2133076971
+      m_Sprite: {fileID: 21300000, guid: 7de4167ea39004aa2929941d6bf998a0, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7de4167ea39004aa2929941d6bf998a0, type: 3}
+    - m_Name: Guard Goblin
+      m_Hash: 215957076
+      m_Sprite: {fileID: 21300000, guid: ccc5c195f7fcc4ceba7197abc835d2de, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ccc5c195f7fcc4ceba7197abc835d2de, type: 3}
+    - m_Name: Hermit
+      m_Hash: 1635091504
+      m_Sprite: {fileID: 21300000, guid: 8d530d5ddf5c94fb59800822e77bc624, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8d530d5ddf5c94fb59800822e77bc624, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 17
+  m_PrimaryLibraryGUID: 

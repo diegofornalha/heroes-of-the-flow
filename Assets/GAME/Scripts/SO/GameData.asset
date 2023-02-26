@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d6e00de21f94dd1a22d876216491c0, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  characters:
+  - name: Magma Demon
+    tier: 3
+    attack: 4
+    health: 4
+    ability: 
+    cardImage: {fileID: 21300000, guid: 9b2145c1493574293a9a33927b9dfce7, type: 3}
+    characterImage: {fileID: 21300000, guid: 4a9c8fd5080af4158b54ef62febd90d8, type: 3}
+  - name: Devourer
+    tier: 2
+    attack: 3
+    health: 3
+    ability: 
+    cardImage: {fileID: 21300000, guid: 2a2f5bf9baa34428bb8b6f8b95c9ae46, type: 3}
+    characterImage: {fileID: 21300000, guid: f4069e5a0e2b24cffa863a72321d1c21, type: 3}
+  - name: Imp
+    tier: 3
+    attack: 4
+    health: 4
+    ability: 
+    cardImage: {fileID: 21300000, guid: a9ef1d0e67c78467b89593542e128f5c, type: 3}
+    characterImage: {fileID: 21300000, guid: d55a8d72fc6ac4f8f912ff1db2c0c4af, type: 3}
+  - name: Marsh Howler
+    tier: 3
+    attack: 3
+    health: 4
+    ability: 
+    cardImage: {fileID: 21300000, guid: f9e5c304ce0e0452caaf1ee41facf49d, type: 3}
+    characterImage: {fileID: 21300000, guid: 7cc6ea604afe54d7bac1814edcf4e9c5, type: 3}
+  - name: Beakling
+    tier: 1
+    attack: 1
+    health: 3
+    ability: 
+    cardImage: {fileID: 21300000, guid: 4f795cce55af34622b6974e107c2df39, type: 3}
+    characterImage: {fileID: 21300000, guid: 9aaff3242eb2c46c88db83336a4ad776, type: 3}
+  - name: Ghnome
+    tier: 3
+    attack: 4
+    health: 3
+    ability: 
+    cardImage: {fileID: 21300000, guid: 8e664214248aa420396fe7e6eabf579c, type: 3}
+    characterImage: {fileID: 21300000, guid: 7de4167ea39004aa2929941d6bf998a0, type: 3}
+  - name: Raptor
+    tier: 2
+    attack: 2
+    health: 2
+    ability: 
+    cardImage: {fileID: 21300000, guid: 649a20920702949ceb060997c256abbc, type: 3}
+    characterImage: {fileID: 21300000, guid: 0a6f4a2a1ea5d4e94b264c9a90e9ca08, type: 3}
+  - name: Snake
+    tier: 2
+    attack: 2
+    health: 3
+    ability: 
+    cardImage: {fileID: 21300000, guid: 35a757496e3dc421091a58a0a8ff313d, type: 3}
+    characterImage: {fileID: 21300000, guid: fe859e8c9697346eeb0321e0d37acaca, type: 3}
+  - name: Boar
+    tier: 1
+    attack: 2
+    health: 2
+    ability: 
+    cardImage: {fileID: 21300000, guid: f8f5b05f98dbd4d50b0081c57036fd69, type: 3}
+    characterImage: {fileID: 21300000, guid: 245b80d2026584fc4a5aa3238f6c6e19, type: 3}
+  - name: 'Slug '
+    tier: 2
+    attack: 1
+    health: 3
+    ability: 
+    cardImage: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: Scorpion
+    tier: 2
+    attack: 3
+    health: 2
+    ability: 
+    cardImage: {fileID: 21300000, guid: 90b173d0177dc49e88428a98cfa68291, type: 3}
+    characterImage: {fileID: 21300000, guid: ae5e4a7c55b40452bb6b4d00ec2e35f7, type: 3}
+  - name: Guard Goblin
+    tier: 3
+    attack: 2
+    health: 6
+    ability: 
+    cardImage: {fileID: 21300000, guid: 69b645d0adbf641d1b8798c6d189aa49, type: 3}
+    characterImage: {fileID: 21300000, guid: ccc5c195f7fcc4ceba7197abc835d2de, type: 3}
+  - name: Lurker
+    tier: 2
+    attack: 2
+    health: 4
+    ability: 
+    cardImage: {fileID: 21300000, guid: b60cbcecda4614de59bee63e0f18bb34, type: 3}
+    characterImage: {fileID: 21300000, guid: 8a74ed134e9bf460f9fc92a552361bf9, type: 3}
+  - name: Bug
+    tier: 1
+    attack: 1
+    health: 1
+    ability: 
+    cardImage: {fileID: 21300000, guid: 8a4b1f6dfb39f49b494c003e5d8802f0, type: 3}
+    characterImage: {fileID: 21300000, guid: bed68166a1a59432c86d950225c40ac0, type: 3}
+  - name: Toad
+    tier: 1
+    attack: 2
+    health: 1
+    ability: 
+    cardImage: {fileID: 21300000, guid: 89399a6481e204d5c8f9f2a72f40748e, type: 3}
+    characterImage: {fileID: 21300000, guid: 0b5b718f242a946098182c0be2b4fe96, type: 3}
+  - name: Spider
+    tier: 1
+    attack: 3
+    health: 1
+    ability: 
+    cardImage: {fileID: 21300000, guid: f716236825e244529877056cc1f2e20a, type: 3}
+    characterImage: {fileID: 0}
