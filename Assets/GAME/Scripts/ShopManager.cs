@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ShopManager : MonoBehaviour
   [SerializeField] private GameObject _cardPrefab;
   [SerializeField] private Transform _cardParent;
   [SerializeField] CardController _cardController;//Only needed for Slots!
+  [SerializeField] Button _drawButton;
 
   private int _mana;
 
@@ -25,6 +27,22 @@ public class ShopManager : MonoBehaviour
       OnManaUpdated?.Invoke(_mana);
     }
   }
+
+  void OnEnable()
+  {
+    CardController.OnCardPurchased += OnCardPurchased;
+  }
+
+  void OnDisable()
+  {
+    CardController.OnCardPurchased -= OnCardPurchased;
+  }
+
+  void OnCardPurchased(CharacterCard card)
+  {
+    mana -= 3;//card.Tier;
+  }
+
 
   void Start()
   {
@@ -39,12 +57,12 @@ public class ShopManager : MonoBehaviour
   public void Draw()
   {
     if (_mana <= 0) return;
+    StartCoroutine(AvoidDoubleClick());
+    foreach (Transform child in _cardParent)
+    {
+      Destroy(child.gameObject);
+    }
     mana--;
-
-    // foreach (Transform child in _cardParent)
-    // {
-    //   Destroy(child.gameObject);
-    // }
     List<Character> characters = _gameData.characters.Where(x => x.tier == 1).ToList();
     var shuffledList = characters.OrderBy(x => UnityEngine.Random.value).ToList();
     for (int i = 0; i < 3; i++)
@@ -79,6 +97,14 @@ public class ShopManager : MonoBehaviour
     }
 
     SceneManager.LoadScene("BattleScene");
+  }
+
+
+  IEnumerator AvoidDoubleClick()
+  {
+    _drawButton.interactable = false;
+    yield return new WaitForSeconds(1);
+    _drawButton.interactable = true;
   }
 
 

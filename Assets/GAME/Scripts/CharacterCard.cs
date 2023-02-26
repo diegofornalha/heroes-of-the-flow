@@ -22,6 +22,12 @@ public class CharacterCard : MonoBehaviour
   public string Effect;
   private Dictionary<string, string> ExtraData;
 
+  public bool IsCharacter
+  {
+    get => GetComponent<CharacterCardUI>().IsCharacter;
+    set => GetComponent<CharacterCardUI>().IsCharacter = value;
+  }
+
   public int Health
   {
     get => health;

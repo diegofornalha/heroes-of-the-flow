@@ -36,6 +36,7 @@ public class CharacterCardUI : MonoBehaviour
 
   public bool IsCharacter
   {
+    get => _character.activeSelf;
     set
     {
       _card.SetActive(!value);
