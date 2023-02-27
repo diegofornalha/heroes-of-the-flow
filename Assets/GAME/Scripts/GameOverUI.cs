@@ -61,7 +61,7 @@ public class GameOverUI : MonoBehaviour
     {
       _outcomeText.text = outcome;
     }
-    _animator.SetTrigger("gameover");
+    _animator.SetTrigger("open");//Open gameover panel
   }
 
   public void LoadShop()

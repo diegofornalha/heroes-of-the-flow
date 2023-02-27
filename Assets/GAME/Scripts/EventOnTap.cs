@@ -9,7 +9,6 @@ public class EventOnTap : MonoBehaviour, IPointerDownHandler
   public UnityEvent OnTap;
   public void OnPointerDown(PointerEventData eventData)
   {
-    Debug.Log("Tapped");
     OnTap?.Invoke();
   }
 }

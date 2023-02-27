@@ -43,7 +43,7 @@ public class CharacterCardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler,
     _defaultPosition = transform.position;
     //OnSelected?.Invoke(this);
     StopAllCoroutines();
-    StartCoroutine(ScaleUp());
+    //StartCoroutine(ScaleUp());
   }
 
   public void OnPointerUp(PointerEventData eventData)
@@ -54,21 +54,21 @@ public class CharacterCardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler,
   }
 
 
-  IEnumerator ScaleUp()
-  {
-    float scale = 1.2f;
-    yield return new WaitForSeconds(0.5f);
+  // IEnumerator ScaleUp()
+  // {
+  //   float scale = 1.2f;
+  //   yield return new WaitForSeconds(0.5f);
 
 
 
-    _rectTransform.localScale = Vector3.one * scale;
+  //   _rectTransform.localScale = Vector3.one * scale;
 
-    transform.position = Input.mousePosition + new Vector3(0, _rectTransform.lossyScale.y * _rectTransform.rect.size.y / 2, 0);
-    // while (_rectTransform.localScale.x < 1.2f)
-    // {
-    //   _rectTransform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-    //   yield return new WaitForSeconds(0.01f);
-    // }
-  }
+  //   transform.position = Input.mousePosition + new Vector3(0, _rectTransform.lossyScale.y * _rectTransform.rect.size.y / 2, 0);
+  //   // while (_rectTransform.localScale.x < 1.2f)
+  //   // {
+  //   //   _rectTransform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+  //   //   yield return new WaitForSeconds(0.01f);
+  //   // }
+  // }
 
 }

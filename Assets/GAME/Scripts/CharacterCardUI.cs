@@ -19,6 +19,7 @@ public class CharacterCardUI : MonoBehaviour
   [SerializeField] private Image _cardImage;
   [SerializeField] private Image _characterImage;
   [SerializeField] SpriteLibraryAsset _spriteLibrary;
+  [SerializeField] private Image _tierImage;
 
   void OnEnable()
   {
@@ -52,10 +53,14 @@ public class CharacterCardUI : MonoBehaviour
     }
   }
 
+  public int Tier { set => _tierImage.sprite = _spriteLibrary.GetSprite("tiers", value.ToString()); }
+
+
   private void SetCharacter(Character character)
   {
     _nameText.text = character.name;
     _abilityText.text = character.ability;
+    Tier = character.tier;
     _cardImage.sprite = _spriteLibrary.GetSprite("cards", character.name);
     _characterImage.sprite = _spriteLibrary.GetSprite("characters", character.name);
     // _cardImage.sprite = character.cardImage;

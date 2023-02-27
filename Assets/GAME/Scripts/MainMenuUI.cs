@@ -7,8 +7,13 @@ public class MainMenuUI : MonoBehaviour
 
   public void LoadShop()
   {
-    // Load the shop scene
     UnityEngine.SceneManagement.SceneManager.LoadScene("ShopScene");
   }
+
+  public void LoadShoppe()
+  {
+    UnityEngine.SceneManagement.SceneManager.LoadScene("ShoppeScene");
+  }
+
 
 }

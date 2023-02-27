@@ -49,9 +49,7 @@ public class ShopManager : MonoBehaviour
     mana = 10;
     Draw();
     mana = 10;
-    // BattleData.Lives = 3;
     BattleData.Turns++;
-    // BattleData.Victories = 0;
   }
 
   public void Draw()
