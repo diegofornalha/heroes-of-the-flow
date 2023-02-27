@@ -172,7 +172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 48.5961, y: 16.96}
+  m_AnchoredPosition: {x: 48.5961, y: 8.9}
   m_SizeDelta: {x: -97.1922, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2427007243764211309
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Top Hat
+  m_text: Jurerd the Barbarian
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2aac3127ea4af482dbd05d6f430129ad, type: 2}
   m_sharedMaterial: {fileID: -3598384962765288291, guid: 2aac3127ea4af482dbd05d6f430129ad, type: 2}
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -435,6 +435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2427007244104574623}
+  - component: {fileID: 6078354334989083311}
   m_Layer: 5
   m_Name: ShoppePanel
   m_TagString: Untagged
@@ -464,8 +465,22 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 223.36, y: 126.6}
+  m_SizeDelta: {x: 223.36, y: 97.58}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6078354334989083311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427007244104574616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb8de04636d0495c835b560828c5b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _titleText: {fileID: 2427007243957633921}
+  _itemImage: {fileID: 2427007244821979056}
 --- !u!1 &2427007244821979058
 GameObject:
   m_ObjectHideFlags: 0

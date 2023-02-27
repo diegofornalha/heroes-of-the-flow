@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1655558354980452715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655558354980452717}
+  - component: {fileID: 1655558354980452714}
+  m_Layer: 0
+  m_Name: GraphQLQuery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655558354980452717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655558354980452715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1080, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655558354980452714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655558354980452715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 617366411, guid: 73fa9274496e3104388db8cbb0646d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GraphQL: {fileID: 0}
+  MainThread: {fileID: 0}
+  Description: 
+  QueryId: 
+  Query: "query nftModels($appId: ID) {\n  nftModels(appId: $appId, maxResults: 50)
+    {\n    items {\n      id\n      blockchainId\n      title\n      description\n     
+    quantity\n      quantityMinted\n      nfts {\n        blockchainState\n       
+    id\n        blockchainId\n        serialNumber\n        transactions {\n           
+    blockchain\n            hash\n            name\n        }\n      }\n      status\n     
+    rarity\n      content {\n        files {\n          url\n          contentType\n       
+    }\n        poster {\n          url\n        }\n      }\n    }\n    cursor\n 
+    }\n}"
+  VariablesAsJson: 
+  VariableObjects: []
+  CreateResultObjects: 0
+  ArrayLimitForResult: 30
+  ExecuteQuery: 0
+  StartStopQuery: 0
+  Exception: 
+  Timestamp: 
+  DataId: 
+  Data: 
+  Errors: 
+  ResultEvent:
+    m_PersistentCalls:
+      m_Calls: []

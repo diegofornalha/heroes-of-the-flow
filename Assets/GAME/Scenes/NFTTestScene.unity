@@ -310,73 +310,68 @@ MonoBehaviour:
   m_Script: {fileID: -1514322044, guid: 73fa9274496e3104388db8cbb0646d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &405452682
-GameObject:
+--- !u!1001 &1655558355384569569
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 405452684}
-  - component: {fileID: 405452683}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &405452683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405452682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 617366411, guid: 73fa9274496e3104388db8cbb0646d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GraphQL: {fileID: 152620277}
-  MainThread: {fileID: 152620278}
-  Description: 
-  QueryId: 
-  Query: "query nftModels($appId: ID) {\n  nftModels(appId: $appId, maxResults: 50)
-    {\n    items {\n      id\n      blockchainId\n      title\n      description\n     
-    quantity\n      quantityMinted\n      nfts {\n        blockchainState\n       
-    id\n        blockchainId\n        serialNumber\n        transactions {\n           
-    blockchain\n            hash\n            name\n        }\n      }\n      status\n     
-    rarity\n      content {\n        files {\n          url\n          contentType\n       
-    }\n        poster {\n          url\n        }\n      }\n    }\n    cursor\n 
-    }\n}"
-  VariablesAsJson: 
-  VariableObjects: []
-  CreateResultObjects: 0
-  ArrayLimitForResult: 30
-  ExecuteQuery: 0
-  StartStopQuery: 0
-  Exception: 
-  Timestamp: 
-  DataId: 
-  Data: 
-  Errors: 
-  ResultEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &405452684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405452682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1080, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1655558354980452714, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: GraphQL
+      value: 
+      objectReference: {fileID: 152620277}
+    - target: {fileID: 1655558354980452714, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: MainThread
+      value: 
+      objectReference: {fileID: 152620278}
+    - target: {fileID: 1655558354980452715, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_Name
+      value: GraphQLQuery
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655558354980452717, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b06835003d1e40c0a9dc6aa8e183d7e, type: 3}

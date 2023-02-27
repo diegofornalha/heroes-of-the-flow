@@ -9,27 +9,6 @@ using System.Linq;
 using System;
 using UnityEngine.U2D.Animation;
 
-[System.Serializable]
-public class Character : ICloneable
-{
-  public string name;
-  public int tier;
-  public int attack;
-  public int health;
-  public string ability;
-  public string trigger;
-  public string condition;
-  public string effect;
-  public string data;
-  // public Sprite cardImage;
-  // public Sprite characterImage;
-
-  public object Clone()
-  {
-    return this.MemberwiseClone();
-  }
-
-}
 
 
 public class DatabaseManager : MonoBehaviour

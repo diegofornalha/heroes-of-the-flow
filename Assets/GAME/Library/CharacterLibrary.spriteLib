@@ -211,4 +211,67 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: 9ea4ab79f67a842959536e2ef5373cb3, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: Heroes
+    m_Hash: 1344310001
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Jurerd The Barbarian
+      m_Hash: -1833404430
+      m_Sprite: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+    - m_Name: Norwood The Scout
+      m_Hash: 2102557407
+      m_Sprite: {fileID: 21300000, guid: cefaef086d83841f395c6fb475144edc, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: cefaef086d83841f395c6fb475144edc, type: 3}
+    - m_Name: Groussumora The Dwarven Healer
+      m_Hash: -1296248555
+      m_Sprite: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Minion Hats
+    m_Hash: 461839243
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Top Hat
+      m_Hash: -1078734049
+      m_Sprite: {fileID: 21300000, guid: e46db8766a4f547dd93f6e1d10714701, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e46db8766a4f547dd93f6e1d10714701, type: 3}
+    - m_Name: Wizard Hat
+      m_Hash: -2017531533
+      m_Sprite: {fileID: 21300000, guid: 13b3bce08489f4cc1921ab78acc954d7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 13b3bce08489f4cc1921ab78acc954d7, type: 3}
+    - m_Name: Crown
+      m_Hash: -1850174752
+      m_Sprite: {fileID: 21300000, guid: 7daad2200b55c436184b3db66374118b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 7daad2200b55c436184b3db66374118b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Backgrounds
+    m_Hash: -163219044
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: The Icy Mountains
+      m_Hash: -107121130
+      m_Sprite: {fileID: 21300000, guid: d3c9a7d7d2ed54f4e9a403f44778e341, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: d3c9a7d7d2ed54f4e9a403f44778e341, type: 3}
+    - m_Name: The Circle of Steepbury
+      m_Hash: -706495149
+      m_Sprite: {fileID: 21300000, guid: 55f57af4603484929b64bc54c376b67e, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 55f57af4603484929b64bc54c376b67e, type: 3}
+    - m_Name: The Dome of Norddahl
+      m_Hash: -445768010
+      m_Sprite: {fileID: 21300000, guid: 639944db09cd241b2829eaa793703c7a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 639944db09cd241b2829eaa793703c7a, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
