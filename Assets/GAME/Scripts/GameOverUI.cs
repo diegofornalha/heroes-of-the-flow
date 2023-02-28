@@ -36,6 +36,7 @@ public class GameOverUI : MonoBehaviour
 
   private void HandleBattleEnd(string outcome)
   {
+    Debug.Log("Battle ended with outcome: " + outcome);
     SetLife(BattleData.Lives);
     SetTurns(BattleData.Turns);
     SetVictories(BattleData.Victories);
@@ -57,6 +58,12 @@ public class GameOverUI : MonoBehaviour
       _outcomeText.color = _colors[2];
       _image.sprite = _sprites[2];
     }
+    else if (outcome == "victory")
+    {
+      _outcomeText.text = "VICTORY!!!";
+      _outcomeText.color = _colors[1];
+      _image.sprite = _sprites[3];
+    }
     else
     {
       _outcomeText.text = outcome;
@@ -66,7 +73,15 @@ public class GameOverUI : MonoBehaviour
 
   public void LoadShop()
   {
-    SceneManager.LoadScene("ShopScene");
+    if (_outcomeText.text == "VICTORY!!!" || BattleData.Turns >= 10 || BattleData.Lives <= 0)
+    {
+      SceneManager.LoadScene("MainScene");//Main scene resets all data so load this when victory achieved
+    }
+    else
+    {
+      SceneManager.LoadScene("ShopScene");
+    }
+
   }
 
 

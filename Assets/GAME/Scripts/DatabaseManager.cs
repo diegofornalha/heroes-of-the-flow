@@ -36,6 +36,7 @@ public class DatabaseManager : MonoBehaviour
   async void GetGameData()
   {
     _gameData.characters = await WebInterface.GetCharacters();
+    _gameData.enemies = await WebInterface.GetEnemies();
     // foreach (Character character in _gameData.characters)
     // {
     //   character.cardImage = _spriteLibrary.GetSprite("cards", character.name);

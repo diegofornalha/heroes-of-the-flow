@@ -28,7 +28,7 @@ public class ShoppeManager : MonoBehaviour
     foreach (JToken jtoken in results)
     {
       NFTItem nftItem = jtoken.ToObject<NFTItem>();
-      Debug.Log("Data is here! " + nftItem.title);
+      // Debug.Log("Data is here! " + nftItem.title);
       nftItem.image_url = jtoken["content"]["poster"]["url"].ToString();  //poster["poster"];
       nftItem.set_title = jtoken["set"]["title"].ToString();
       nftItems.Add(nftItem);

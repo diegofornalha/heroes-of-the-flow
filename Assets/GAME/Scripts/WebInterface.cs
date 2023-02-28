@@ -11,6 +11,38 @@ using UnityEngine.Networking;
 
 public class WebInterface
 {
+  static async public Task<List<Enemy>> GetEnemies()
+  {
+    List<Enemy> enemies = new List<Enemy>();
+    //https://airtable.com/apphfauTLydw7h0dE/tbl5b8QQmsekA4V9c/viwMqExYv4T9Xk7f6?blocks=hide
+    string uri = "https://api.airtable.com/v0/apphfauTLydw7h0dE/tbl5b8QQmsekA4V9c/";
+    using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
+    {
+      webRequest.SetRequestHeader("Authorization", "Bearer " + "pat8RoqOF0qMupcH5.f1838db7a6512fbc89adc36c3985d66bfef4377b2118804a28dd04194160f3b7");
+      await webRequest.SendWebRequest();
+      string metadataString = webRequest.downloadHandler.text;
+      try
+      {
+        JObject data = JObject.Parse(metadataString);
+        //Debug.Log("data: " + data);
+        IList<JToken> results = data["records"].Children().ToList();
+        foreach (JToken result in results)
+        {
+          Enemy enemy = result["fields"].ToObject<Enemy>();
+          enemies.Add(enemy);
+        }
+        return enemies;
+      }
+      catch (System.Exception ex)
+      {
+        Debug.Log(ex.Message);
+        return null;
+      }
+    }
+
+  }
+
+
 
   static async public Task<List<Character>> GetCharacters()
   {

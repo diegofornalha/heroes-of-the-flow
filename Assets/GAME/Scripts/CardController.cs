@@ -13,6 +13,8 @@ public class CardController : MonoBehaviour
 
   public UICardSlot[] Slots { get { return _slots; } }
 
+  public Transform Placed { get { return _placed; } }
+
   private int _mana;
 
   void OnEnable()
@@ -38,6 +40,18 @@ public class CardController : MonoBehaviour
   {
     currentCard = card;
   }
+
+  public void RemoveCardFromSlots(CharacterCard card)
+  {
+    for (int i = 0; i < _slots.Length; i++)
+    {
+      if (_slots[i].characterCard == card)
+      {
+        _slots[i].characterCard = null;
+      }
+    }
+  }
+
 
   void OnCardEndDrag(CharacterCardDrag card)
   {

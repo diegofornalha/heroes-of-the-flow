@@ -36,6 +36,16 @@ public class NFTItem
 
 }
 
+[System.Serializable]
+public class Enemy
+{
+  public int turn;
+  public int group;
+  public string name;
+}
+
+
+
 
 [CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/GameData", order = 1)]
 public class GameData : ScriptableObject
@@ -43,6 +53,8 @@ public class GameData : ScriptableObject
   public List<Character> characters = new List<Character>();
 
   public List<NFTItem> nftItems = new List<NFTItem>();
+
+  public List<Enemy> enemies = new List<Enemy>();
 
 }
 

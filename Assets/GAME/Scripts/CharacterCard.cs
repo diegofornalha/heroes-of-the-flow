@@ -8,10 +8,11 @@ public class CharacterCard : MonoBehaviour
 {
   public Action<Character> OnCharacterUpdated;
   public Action<int> OnHealthUpdated;
+  public Action<int> OnDamageTaken;
   // private Action _onMinionDefeated;
 
   public static Action<Character, bool> SummonMinion;
-  public static Action<int> DamageRandomEnemy;
+  public static Action<int, bool> DamageRandomEnemy;
 
   public string Name;
   public int Tier;
@@ -31,12 +32,19 @@ public class CharacterCard : MonoBehaviour
   public int Health
   {
     get => health;
-    set
+    private set
     {
       health = value;
       OnHealthUpdated?.Invoke(health);
     }
   }
+
+  public void TakeDamage(int damage)
+  {
+    Health -= damage;
+    OnDamageTaken?.Invoke(damage);
+  }
+
 
   public void SetCard(Character character)
   {
@@ -99,7 +107,7 @@ public class CharacterCard : MonoBehaviour
           {
             Debug.Log("Damage random enemy");
             // DamageRandomEnemy(1);
-            DamageRandomEnemy?.Invoke(int.Parse(ExtraData["damage"]));
+            DamageRandomEnemy?.Invoke(int.Parse(ExtraData["damage"]), IsEnemy);
           }
         }
         else if (ExtraData["target"] == "self")
@@ -116,11 +124,12 @@ public class CharacterCard : MonoBehaviour
     try
     {
       Debug.Log("Minion: " + Name + " died." + " Trigger: " + Trigger);
-      foreach (string key in ExtraData.Keys)
-      {
-        Debug.Log("key: " + key + " value: " + ExtraData[key]);
-      }
-      if (Trigger == "OnDefeated")
+      //if (Trigger == null) return;
+      // foreach (string key in ExtraData.Keys)
+      // {
+      //   Debug.Log("key: " + key + " value: " + ExtraData[key]);
+      // }
+      if (Trigger != null && Trigger == "OnDefeated")
       {
         if (Effect == "Summon")
         {

@@ -7,6 +7,12 @@ public class MainMenuUI : MonoBehaviour
 
   public void LoadShop()
   {
+    BattleData.Turns = 0;
+    BattleData.Lives = 3;
+    BattleData.Victories = 0;
+
+
+
     UnityEngine.SceneManagement.SceneManager.LoadScene("ShopScene");
   }
 

@@ -17,6 +17,8 @@ public class BattleManager : MonoBehaviour
   private List<CharacterCard> _playerCards = new List<CharacterCard>();
   private List<CharacterCard> _enemyCards = new List<CharacterCard>();
 
+  private bool battleEnded = false;
+
   // void OnEnable()
   // {
   //   CharacterCard.SummonMinion += HandleSummon;
@@ -34,23 +36,37 @@ public class BattleManager : MonoBehaviour
     Summon(character, true, enemy);
   }
 
-  private void DamageRandomEnemy(int damage)
+  private void DamageRandomEnemy(int damage, bool enemy)
   {
-    StartCoroutine(DamageRandomEnemy(damage, 1.5f));
+    StartCoroutine(DamageRandomEnemy(damage, 1.5f, enemy));
   }
 
-  IEnumerator DamageRandomEnemy(int damage, float delay)
+  IEnumerator DamageRandomEnemy(int damage, float delay, bool enemy)
   {
-    yield return new WaitForSeconds(delay);
-    int random = UnityEngine.Random.Range(0, _enemyCards.Count);
-    CharacterCard enemyCharacter = _enemyCards[random];
-    enemyCharacter.Health -= damage;
-    if (enemyCharacter.Health <= 0)
+    var cardsToDamage = enemy ? _playerCards : _enemyCards;//player damages enemy cards
+    if (cardsToDamage.Count == 0)
     {
-      enemyCharacter.SetAnimation("die");
+      Debug.Log("DamageRandomEnemy: No cards to damage");
+      yield break;
+    }
+    int random = UnityEngine.Random.Range(0, cardsToDamage.Count);
+    Debug.Log("DamageRandomEnemy: " + damage + " random: " + random);
+    yield return new WaitForSeconds(delay);
+    CharacterCard cardToDamage = cardsToDamage[random];
+    // enemyCharacter.Health -= damage;
+    cardToDamage.TakeDamage(damage);
+
+    if (cardToDamage.Health <= 0)
+    {
+      cardToDamage.SetAnimation("die");
       yield return new WaitForSeconds(1.0f);
-      _enemyCards.Remove(enemyCharacter);
-      enemyCharacter.MinionDefeated();
+      // if (enemy)
+      //   _playerCards.Remove(cardToDamage);
+      // else
+      //   _enemyCards.Remove(enemyCharacter);
+      // // _enemyCards.Remove(enemyCharacter);
+      cardsToDamage.Remove(cardToDamage);
+      cardToDamage.MinionDefeated();
       Ready();
     }
     yield return null;
@@ -62,6 +78,7 @@ public class BattleManager : MonoBehaviour
     CharacterCard.DamageRandomEnemy = DamageRandomEnemy;
 
     if (BattleData._playerCharacters.Count == 0) GetComponent<BattleData>().Test();
+    GetComponent<BattleData>().PopulateEnemies();
     PopulateBattle();
     //Do any start of battle abilities here
     foreach (CharacterCard card in _playerCards)
@@ -117,8 +134,10 @@ public class BattleManager : MonoBehaviour
   [ContextMenu("Ready")]
   public void Ready()
   {
+    if (CheckForBattleEnd()) return;
     _playerCards[0].SetAnimation("ready");
     _enemyCards[0].SetAnimation("ready");
+    AttackAndResolve();
   }
 
   [ContextMenu("AttackAndResolve")]
@@ -130,12 +149,12 @@ public class BattleManager : MonoBehaviour
   [ContextMenu("Attack")]
   IEnumerator Attack()
   {
+    yield return new WaitForSeconds(3.0f);
     if (_playerCards.Count == 0 || _enemyCards.Count == 0)
     {
       Debug.Log("Attack-No more characters");
       yield break;
     }
-
     CharacterCard playerCharacter = _playerCards[0];
     CharacterCard enemyCharacter = _enemyCards[0];
     playerCharacter.SetAnimation("attack");
@@ -145,8 +164,15 @@ public class BattleManager : MonoBehaviour
     playerCharacter.Particles();
     enemyCharacter.Particles();
     yield return new WaitForSeconds(0.3f);
-    playerCharacter.Health -= enemyCharacter.Attack;
-    enemyCharacter.Health -= playerCharacter.Attack;
+
+    playerCharacter.TakeDamage(enemyCharacter.Attack);
+    enemyCharacter.TakeDamage(playerCharacter.Attack);
+
+    // playerCharacter.Health -= enemyCharacter.Attack;
+    // enemyCharacter.Health -= playerCharacter.Attack;
+
+
+
     if (playerCharacter.Health <= 0) playerCharacter.SetAnimation("die");
     if (enemyCharacter.Health <= 0) enemyCharacter.SetAnimation("die");
     yield return new WaitForSeconds(1.0f);
@@ -171,30 +197,77 @@ public class BattleManager : MonoBehaviour
       enemyCharacter.MinionDefeated();
       //Destroy(enemyCharacter.gameObject);
     }
+    Debug.Log("Player: " + _playerCards.Count + " Enemy: " + _enemyCards.Count);
 
+
+
+    // if (_playerCards.Count == 0 && _enemyCards.Count == 0)
+    // {
+    //   Debug.Log("DRAW!");
+    //   OnBattleEnd?.Invoke("draw");
+    //   return;
+    // }
+
+
+    // if (_playerCards.Count == 0)
+    // {
+    //   Debug.Log("You Lose");
+    //   BattleData.Lives--;
+    //   OnBattleEnd?.Invoke("lose");
+    //   return;
+    // }
+    // if (_enemyCards.Count == 0)
+    // {
+    //   BattleData.Victories++;
+    //   if (BattleData.Victories == 3)
+    //   {
+    //     Debug.Log("Victory");
+    //     OnBattleEnd?.Invoke("victory");
+    //   }
+    //   else
+    //   {
+    //     Debug.Log("You Win");
+    //     OnBattleEnd?.Invoke("win");
+    //   }
+    //   return;
+    // }
+    Ready();
+  }
+
+  bool CheckForBattleEnd()
+  {
+    if (battleEnded) return true;
+    battleEnded = true;//Must fall through to return false
     if (_playerCards.Count == 0 && _enemyCards.Count == 0)
     {
       Debug.Log("DRAW!");
       OnBattleEnd?.Invoke("draw");
-      return;
+      return true;
     }
-
-
     if (_playerCards.Count == 0)
     {
       Debug.Log("You Lose");
       BattleData.Lives--;
       OnBattleEnd?.Invoke("lose");
-      return;
+      return true;
     }
     if (_enemyCards.Count == 0)
     {
-      Debug.Log("You Win");
       BattleData.Victories++;
-      OnBattleEnd?.Invoke("win");
-      return;
+      if (BattleData.Victories == 3)
+      {
+        Debug.Log("Victory");
+        OnBattleEnd?.Invoke("victory");
+      }
+      else
+      {
+        Debug.Log("You Win");
+        OnBattleEnd?.Invoke("win");
+      }
+      return true;
     }
-    Ready();
+    battleEnded = false;
+    return false;
   }
 
 }

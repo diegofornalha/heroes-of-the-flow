@@ -15,6 +15,7 @@ public class CharacterCardUI : MonoBehaviour
 
   [SerializeField] private TextMeshProUGUI[] _attackText;
   [SerializeField] private TextMeshProUGUI[] _healthText;
+  [SerializeField] private TextMeshProUGUI _damageText;
 
   [SerializeField] private Image _cardImage;
   [SerializeField] private Image _characterImage;
@@ -25,12 +26,14 @@ public class CharacterCardUI : MonoBehaviour
   {
     GetComponent<CharacterCard>().OnCharacterUpdated += SetCharacter;
     GetComponent<CharacterCard>().OnHealthUpdated += SetHealth;
+    GetComponent<CharacterCard>().OnDamageTaken += damage => StartCoroutine(DamageText(damage));
   }
 
   void OnDisable()
   {
     GetComponent<CharacterCard>().OnCharacterUpdated -= SetCharacter;
     GetComponent<CharacterCard>().OnHealthUpdated -= SetHealth;
+    GetComponent<CharacterCard>().OnDamageTaken -= damage => StartCoroutine(DamageText(damage));
   }
 
 
@@ -58,6 +61,7 @@ public class CharacterCardUI : MonoBehaviour
 
   private void SetCharacter(Character character)
   {
+    _damageText.gameObject.SetActive(false);
     _nameText.text = character.name;
     _abilityText.text = character.ability;
     Tier = character.tier;
@@ -81,6 +85,15 @@ public class CharacterCardUI : MonoBehaviour
     {
       healthText.text = health.ToString();
     }
+  }
+
+  private IEnumerator DamageText(int damage)
+  {
+    // Debug.Log("DamageText: " + damage);
+    _damageText.text = damage.ToString();
+    _damageText.gameObject.SetActive(true);
+    yield return new WaitForSeconds(0.5f);
+    _damageText.gameObject.SetActive(false);
   }
 
 

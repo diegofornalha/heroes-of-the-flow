@@ -11,6 +11,7 @@ public class DownloadManager : MonoBehaviour
   private async void Start()
   {
     await GetCharacter();
+    await GetEnemies();
   }
 
   async Task GetCharacter()
@@ -32,8 +33,29 @@ public class DownloadManager : MonoBehaviour
     {
       Debug.Log(ex.Message);
     }
-
-
   }
+
+  [ContextMenu("Get Enemies")]
+  async Task GetEnemies()
+  {
+    Debug.Log("Getting enemies");
+    try
+    {
+      List<Enemy> enemies = await WebInterface.GetEnemies();
+      if (enemies != null && enemies.Count > 0)
+      {
+        _gameData.enemies = enemies;
+      }
+      else
+      {
+        Debug.Log("No enemies found");
+      }
+    }
+    catch (System.Exception ex)
+    {
+      Debug.Log(ex.Message);
+    }
+  }
+
 
 }
