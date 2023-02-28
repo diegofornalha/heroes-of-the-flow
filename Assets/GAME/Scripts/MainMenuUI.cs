@@ -10,8 +10,8 @@ public class MainMenuUI : MonoBehaviour
     BattleData.Turns = 0;
     BattleData.Lives = 3;
     BattleData.Victories = 0;
-
-
+    BattleData._playerCharacters.Clear();
+    BattleData._enemyCharacters.Clear();
 
     UnityEngine.SceneManagement.SceneManager.LoadScene("ShopScene");
   }
