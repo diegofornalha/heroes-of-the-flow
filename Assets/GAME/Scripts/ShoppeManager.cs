@@ -118,7 +118,7 @@ public class ShoppeManager : MonoBehaviour
       PlayerPrefs.SetString(WALLETKEY, address);
       PlayerPrefs.SetString(WALLETIDKEY, id);
       //e6189dcb-80c4-411f-b451-383ca81a0557
-      MintAndTransfer("e6189dcb-80c4-411f-b451-383ca81a0557");//Mint healer hero
+      MintAndTransfer("563cf053-3e47-486a-b807-e3be829787df");//Mint healer hero
       Debug.Log("Prefs: " + id);
       OnWalletAddressChanged.Invoke(address);
       ExecuteQuery();
