@@ -217,9 +217,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Jurerd The Barbarian
       m_Hash: -1833404430
-      m_Sprite: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+      m_Sprite: {fileID: 21300000, guid: 72c24f316adc44e9a998a906909bd5a6, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 21300000, guid: 121506e032f59421c98fe3dad71c7cad, type: 3}
+      m_SpriteOverride: {fileID: 21300000, guid: 72c24f316adc44e9a998a906909bd5a6, type: 3}
     - m_Name: Norwood The Scout
       m_Hash: 2102557407
       m_Sprite: {fileID: 21300000, guid: cefaef086d83841f395c6fb475144edc, type: 3}

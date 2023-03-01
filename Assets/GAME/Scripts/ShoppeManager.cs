@@ -52,6 +52,7 @@ public class ShoppeManager : MonoBehaviour
 
   public void ResultEvent(GraphQLResult result)
   {
+    Dictionary<string, int> rarityOrder = new Dictionary<string, int>() { { "COMMON", 0 }, { "RARE", 1 }, { "LEGENDARY", 2 } };
     JObject data = JObject.Parse(result.Data.ToString());
     IList<JToken> results = data["nftModels"]["items"].Children().ToList();
     foreach (JToken jtoken in results)
@@ -60,9 +61,18 @@ public class ShoppeManager : MonoBehaviour
       // Debug.Log("Data is here! " + nftItem.title);
       nftItem.image_url = jtoken["content"]["poster"]["url"].ToString();  //poster["poster"];
       nftItem.set_title = jtoken["set"]["title"].ToString();
+      try
+      {
+        nftItem.orderby = rarityOrder[nftItem.rarity];
+      }
+      catch (System.Exception)
+      {
+
+      }
+
       nftItems.Add(nftItem);
     }
-    _gameData.nftItems = nftItems;
+    _gameData.nftItems = nftItems.OrderBy(n => n.orderby).ToList();
     OnNFTItemsDownloaded?.Invoke();
     CheckForOwnedNFTs();
   }

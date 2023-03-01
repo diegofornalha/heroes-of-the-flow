@@ -34,6 +34,7 @@ public class NFTItem
   public string description;
   public string image_url;
   public string rarity;
+  public int orderby;
   public bool owned;
 }
 

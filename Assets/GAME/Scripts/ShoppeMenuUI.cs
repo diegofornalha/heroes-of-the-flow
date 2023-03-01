@@ -70,6 +70,7 @@ public class ShoppeMenuUI : MonoBehaviour
         Destroy(child.gameObject);
       }
     }
+
     foreach (var item in _gameData.nftItems)
     {
       ShoppePanelUI shoppePanelUI = Instantiate(_shoppePanelPrefab, _panelParents[_shoppePanels[item.set_title]]);
