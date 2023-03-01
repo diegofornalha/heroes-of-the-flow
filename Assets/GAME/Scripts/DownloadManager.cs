@@ -6,14 +6,11 @@ using UnityEngine;
 public class DownloadManager : MonoBehaviour
 {
   [SerializeField] private GameData _gameData;
-
-
   private async void Start()
   {
     await GetCharacter();
     await GetEnemies();
   }
-
   async Task GetCharacter()
   {
     Debug.Log("Getting characters");
@@ -34,7 +31,6 @@ public class DownloadManager : MonoBehaviour
       Debug.Log(ex.Message);
     }
   }
-
   [ContextMenu("Get Enemies")]
   async Task GetEnemies()
   {

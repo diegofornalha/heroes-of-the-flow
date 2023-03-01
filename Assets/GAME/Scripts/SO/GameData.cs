@@ -33,7 +33,8 @@ public class NFTItem
   public string title;
   public string description;
   public string image_url;
-
+  public string rarity;
+  public bool owned;
 }
 
 [System.Serializable]
