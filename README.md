@@ -23,6 +23,19 @@ Contributors names and contact info
 Morgan Page [@PlatoEvolved](https://twitter.com/PlatoEvolved)
 Anna Stoilova [@annastoic](https://twitter.com/annastoic)
 
+## Art
+
+By [REXARD](https://www.weblancer.net/users/Fidell1985/portfolio/)
+
+Purchased from the asset store
+
+info.rexard@gmail.com
+
+Backgrounds purchased here:
+https://assetstore.unity.com/packages/2d/environments/battle-backgrounds-pack-vol-1-240333
+https://assetstore.unity.com/packages/2d/environments/battle-backgrounds-pack-vol-2-240368
+
+
 ## Version History
 
 * 0.5 Hackathon submission
