@@ -36,6 +36,9 @@ public class NFTItem
   public string rarity;
   public int orderby;
   public bool owned;
+  public int quantity;
+  public int quantityMinted;
+  public bool soldOut;
 }
 
 [System.Serializable]

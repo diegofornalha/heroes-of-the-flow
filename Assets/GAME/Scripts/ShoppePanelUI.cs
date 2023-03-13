@@ -15,6 +15,8 @@ public class ShoppePanelUI : MonoBehaviour, IPointerClickHandler
 
   [SerializeField] private Image _itemImage;
   [SerializeField] private GameObject _tick;
+  [SerializeField] private GameObject _soldOut;
+
   [SerializeField] private Color[] _colors;
 
   private Dictionary<string, int> rarityToColorIndex = new Dictionary<string, int>() { { "COMMON", 0 }, { "RARE", 1 }, { "LEGENDARY", 2 } };
@@ -32,6 +34,7 @@ public class ShoppePanelUI : MonoBehaviour, IPointerClickHandler
     {
     }
     _tick.SetActive(item.owned);
+    _soldOut.SetActive(item.soldOut && !item.owned);
   }
 
   public void SetImage(Sprite sprite)
@@ -41,6 +44,6 @@ public class ShoppePanelUI : MonoBehaviour, IPointerClickHandler
 
   public void OnPointerClick(PointerEventData eventData)
   {
-    if (!_tick.activeSelf) OnClick.Invoke(nftId);
+    if (!_tick.activeSelf && !_soldOut.activeSelf) OnClick.Invoke(nftId);
   }
 }

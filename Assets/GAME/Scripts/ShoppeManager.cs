@@ -61,6 +61,7 @@ public class ShoppeManager : MonoBehaviour
       // Debug.Log("Data is here! " + nftItem.title);
       nftItem.image_url = jtoken["content"]["poster"]["url"].ToString();  //poster["poster"];
       nftItem.set_title = jtoken["set"]["title"].ToString();
+      nftItem.soldOut = nftItem.quantityMinted == nftItem.quantity;
       try
       {
         nftItem.orderby = rarityOrder[nftItem.rarity];
